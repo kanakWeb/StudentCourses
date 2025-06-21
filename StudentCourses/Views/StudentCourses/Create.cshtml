@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 ﻿@model StudentCourses.Models.StudentCourse
 
 <h2>Add Student Result</h2>
+=======
+﻿@model StudentCourse
+
+<h1>Add Course Result</h1>
+>>>>>>> 73291c006c9d2e460b5e3b9546d8720894a754b9
 
 <form asp-action="Create" method="post">
     <div class="form-group">
@@ -8,19 +14,29 @@
         <input asp-for="StudentName" class="form-control" />
         <span asp-validation-for="StudentName" class="text-danger"></span>
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 73291c006c9d2e460b5e3b9546d8720894a754b9
     <div class="form-group">
         <label asp-for="CourseTitle"></label>
         <input asp-for="CourseTitle" class="form-control" />
         <span asp-validation-for="CourseTitle" class="text-danger"></span>
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 73291c006c9d2e460b5e3b9546d8720894a754b9
     <div class="form-group">
         <label asp-for="TotalMarks"></label>
         <input asp-for="TotalMarks" class="form-control" />
         <span asp-validation-for="TotalMarks" class="text-danger"></span>
     </div>
+<<<<<<< HEAD
 
     <button type="submit" class="btn btn-success">Save</button>
     <a asp-action="Index" class="btn btn-secondary">Back</a>
+=======
+    <button type="submit" class="btn btn-primary">Submit</button>
+>>>>>>> 73291c006c9d2e460b5e3b9546d8720894a754b9
 </form>

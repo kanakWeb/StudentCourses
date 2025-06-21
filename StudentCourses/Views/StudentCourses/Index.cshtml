@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 
 
@@ -41,3 +42,46 @@
     </tbody>
 </table>
         
+=======
+﻿@model IEnumerable<StudentCourse>  
+@{  
+    ViewData["Title"] = "Courses";  
+}  
+
+<h1>Courses</h1>  
+
+<form method="get">  
+    <label>Filter by Status:</label>  
+    <select name="status" onchange="this.form.submit()">  
+        <option value="">All</option>  
+        @foreach (var s in ViewBag.StatusList)  
+        {  
+            <option value="@s" selected="@(ViewBag.SelectedStatus?.ToString() == s.ToString() ? "selected" : null)">@s</option>  
+        }  
+    </select>  
+</form>  
+
+<table class="table">  
+    <thead>  
+        <tr>  
+            <th>Student Name</th>  
+            <th>Course Title</th>  
+            <th>Total Marks</th>  
+            <th>Status</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+    @foreach (var item in Model)  
+    {  
+        <tr>  
+            <td>@item.StudentName</td>  
+            <td>@item.CourseTitle</td>  
+            <td>@item.TotalMarks</td>  
+            <td style="color:@(item.Status == CourseStatus.Excellent ? "green" : item.Status == CourseStatus.Good ? "blue" : "red")">  
+                @item.Status  
+            </td>  
+        </tr>  
+    }  
+    </tbody>  
+</table>
+>>>>>>> 73291c006c9d2e460b5e3b9546d8720894a754b9

@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+<<<<<<< HEAD
 using StudentCourses.Models;
+=======
+>>>>>>> 73291c006c9d2e460b5e3b9546d8720894a754b9
 
 public class StudentCoursesController : Controller
 {
@@ -33,10 +36,14 @@ public class StudentCoursesController : Controller
         return View(await query.ToListAsync());
     }
 
+<<<<<<< HEAD
     public IActionResult Create()
     {
         return View();
     }
+=======
+    public IActionResult Create() => View();
+>>>>>>> 73291c006c9d2e460b5e3b9546d8720894a754b9
 
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -50,6 +57,10 @@ public class StudentCoursesController : Controller
             return RedirectToAction(nameof(Index));
         }
         return View(studentCourse);
+<<<<<<< HEAD
    
 }
+=======
+    }
+>>>>>>> 73291c006c9d2e460b5e3b9546d8720894a754b9
 }
