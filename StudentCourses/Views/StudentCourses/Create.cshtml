@@ -1,0 +1,22 @@
+﻿@model StudentCourse
+
+<h1>Add Course Result</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="StudentName"></label>
+        <input asp-for="StudentName" class="form-control" />
+        <span asp-validation-for="StudentName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CourseTitle"></label>
+        <input asp-for="CourseTitle" class="form-control" />
+        <span asp-validation-for="CourseTitle" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TotalMarks"></label>
+        <input asp-for="TotalMarks" class="form-control" />
+        <span asp-validation-for="TotalMarks" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
